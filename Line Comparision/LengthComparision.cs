@@ -32,8 +32,8 @@ namespace Line_Comparision
             float a2 = float.Parse(Console.ReadLine());
             Console.WriteLine("Enter Fourth pointof second line :");
             float b2 = float.Parse(Console.ReadLine());
-            float p = x2 - x1;
-            float q = y2 - y1;
+            float p = a2 - a1;
+            float q = b2 - b1;
             float r = p * p + q * q;
             Console.WriteLine("The length of a second line is :");
             Console.WriteLine(System.Math.Sqrt(r));
