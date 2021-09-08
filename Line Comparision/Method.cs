@@ -8,7 +8,7 @@ namespace Line_Comparision
 {
     class Program
     { 
-        static void Main(string[] args)
+        public static float CompareLine()
         {
             Console.WriteLine("Enter first point of first line :");
             float x1 = float.Parse(Console.ReadLine());
@@ -17,12 +17,12 @@ namespace Line_Comparision
             Console.WriteLine("Enter Third point  of first line :");
             float x2 = float.Parse(Console.ReadLine());
             Console.WriteLine("Enter Fourth point  of first line :");
-           float y2 = float.Parse(Console.ReadLine());
-           float v = x2 - x1;
-           float w = y2 - y1;
-           float x = v * v + w * w;
-           Console.WriteLine("The length of a first line is :");
-           Console.WriteLine(System.Math.Sqrt(x)) ;
+            float y2 = float.Parse(Console.ReadLine());
+            float v = x2 - x1;
+            float w = y2 - y1;
+            float x = v * v + w * w;
+            Console.WriteLine("The length of a first line is :");
+            Console.WriteLine(System.Math.Sqrt(x));
 
             Console.WriteLine("Enter first point of second line :");
             float a1 = float.Parse(Console.ReadLine());
@@ -37,18 +37,23 @@ namespace Line_Comparision
             float r = p * p + q * q;
             Console.WriteLine("The length of a second line is :");
             Console.WriteLine(System.Math.Sqrt(r));
-            if(x==r)
+            if (x == r)
             {
                 Console.WriteLine("Length of Both the lines are equal");
             }
-            else if(x>r)
+            else if (x > r)
             {
                 Console.WriteLine("Length of Line 1 is Greater than Line 2");
             }
-            else 
+            else
             {
                 Console.WriteLine("Length of Line 1 is Smaller than Line 2");
             }
+            return 0;
+        }
+        static void Main(string[] args)
+        {
+            CompareLine();
             Console.ReadLine();
         }
     }
